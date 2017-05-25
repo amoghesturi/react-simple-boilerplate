@@ -5,10 +5,10 @@ var config = require('./webpack.config');
 new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath
   })
-  .listen(3000, '0.0.0.0', function (err, result) {
+  .listen(8888, '0.0.0.0', function (err) {
     if (err) {
-      console.log(err);
+      console.log(err); // eslint-disable-line
     }
 
-    console.log('Running at http://0.0.0.0:3000');
+    console.log('Running at http://0.0.0.0:8888'); // eslint-disable-line
   });
